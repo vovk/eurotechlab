@@ -60,8 +60,45 @@ div.logo, div.navigation{
 	border: 1px solid #929292;
 	text-decoration: none;
 }
+.menu li a:focus{
+	outline: none;
+	text-decoration: none;
+}
 h2{
 	color: #000!important;
-	padding: 50px 100px;
 	text-transform: uppercase;
+}
+.title{
+	padding: 50px 150px;
+}
+/*carousel*/
+
+.carousel-inner.onebyone-carosel { margin: auto; }
+.onebyone-carosel .active.left { left: -33.33%; }
+.onebyone-carosel .active.right { left: 33.33%; }
+.onebyone-carosel .next { left: 33.33%; }
+.onebyone-carosel .prev { left: -33.33%; }
+.item .col-xs-4{text-align: center;}
+
+
+.fdi-Carousel .carousel-inner.onebyone-carosel > .item {
+    transition: 500ms ease-in-out left;
+    -webkit-transition: 500ms ease-in-out left;
+
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+  }
+
+a.carousel-control.left, a.carousel-control.right{
+	background-image: none;
+}
+a.carousel-control{
+	top: 50%;
+	bottom: auto;
+}
+.text{
+	margin-top: 50px;
+}
+.text:nth-of-type(n){
+	margin-left: 12.5%;
 }
