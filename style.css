@@ -98,7 +98,7 @@ h2{
     width: 70px;
 }
 /*carousel*/
-/*.carousel-inner.onebyone-carosel { margin: auto; }
+.carousel-inner.onebyone-carosel { margin: auto; }
 .onebyone-carosel .active.left { left: -33.33%; }
 .onebyone-carosel .active.right { left: 33.33%; }
 .onebyone-carosel .next { left: 33.33%; }
@@ -111,7 +111,7 @@ a.carousel-control.left, a.carousel-control.right{
 a.carousel-control{
 	top: 50%;
 	bottom: auto;
-}*/
+}
 .wrapper-text, .wrapper-portfolio{
 	width: 65%;
 	margin: 0 auto;
@@ -121,6 +121,13 @@ a.carousel-control{
 	float: left;
     width: 23%;
     margin-right: 15.5%;
+}
+.text-slider p{
+	color: rgb(155, 155, 155);
+	font-size: 16px;
+	font-family: Lato-Regular;
+  	line-height: 1.5;
+	/*text-align: justify;*/
 }
 .text:nth-of-type(3){
 	margin-right: 0;
