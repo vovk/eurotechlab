@@ -13,15 +13,19 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="dist/bootstrap/js/bootstrap.min.js"></script>
+    <script src="dist/bootstrap/js/bootstrap.js"></script>
     <script src="dist/js/carousel.js"></script>    
     <!-- Map -->
     <script src="dist/js/map.js"></script>
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="dist/slick/slick/slick.css"/>
+    <!-- Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="dist/slick/slick/slick-theme.css"/>
     <title>EuroTechLab</title>
     <link rel="shortcut icon" href="img/favicon.ico" />                
 </head>
 <body>    
-    <div class="container-fluid fullpage">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 main">
                 <section class="first">
@@ -52,86 +56,40 @@
 				        <div class="row">
 				            <div class="col-xs-12">
                         		<h2 class="title">Services</h2>
-			                    <div id="myCarousel" class="carousel fdi-Carousel slide">
-			                    	<!-- Carousel items -->
-			                        <div class="carousel fdi-Carousel slide" id="eventCarousel" data-interval="0">
-			                            <div class="carousel-inner onebyone-carosel">
-			                                <div class="item active">
-			                                    <div class="col-xs-4">
-			                                        <a href="#"><img src="img/iconforservices/png/icon_web_development.png"></a>
-			                                        <div class="text-slider">
-                                                        <h3>Web development</h3>
-                                                        <p>We provide a full range of web development: from front- and back-end code writing to working on database or server side. At the end you will get a state of the art, beautifully designed, user-friendly and functional website. We ensure high quality, efficient and highly collaborative web development.</p>
-                                                    </div>
-			                                    </div>
-			                                </div>
-			                                <div class="item">
-			                                    <div class="col-xs-4">
-			                                        <a href="#"><img src="img/iconforservices/png/icon_mobile_apps.png"></a>
-			                                        <div class="text-slider">
-                                                        <h3>Web development</h3>
-                                                        <p>We provide a full range of web development: from front- and back-end code writing to working on database or server side. At the end you will get a state of the art, beautifully designed, user-friendly and functional website. We ensure high quality, efficient and highly collaborative web development.</p>
-                                                    </div>
-			                                    </div>
-			                                </div>
-			                                <div class="item">
-			                                    <div class="col-xs-4">
-			                                        <a href="#"><img src="img/iconforservices/png/icon_design.png"></a>
-			                                        <div class="text-slider">
-                                                        <h3>Web development</h3>
-                                                        <p>We provide a full range of web development: from front- and back-end code writing to working on database or server side. At the end you will get a state of the art, beautifully designed, user-friendly and functional website. We ensure high quality, efficient and highly collaborative web development.</p>
-                                                    </div>
-			                                    </div>
-			                                </div>
-			                                <div class="item">
-			                                    <div class="col-xs-4">
-			                                        <a href="#"><img src="img/iconforservices/png/icon_strategy.png"></a>
-			                                        <div class="text-slider">
-                                                        <h3>Web development</h3>
-                                                        <p>We provide a full range of web development: from front- and back-end code writing to working on database or server side. At the end you will get a state of the art, beautifully designed, user-friendly and functional website. We ensure high quality, efficient and highly collaborative web development.</p>
-                                                    </div>
-			                                    </div>
-			                                </div>
-			                                <div class="item">
-			                                    <div class="col-xs-4">
-			                                        <a href="#"><img src="img/iconforservices/png/icon_support.png"></a>
-			                                        <div class="text-slider">
-                                                        <h3>Web development</h3>
-                                                        <p>We provide a full range of web development: from front- and back-end code writing to working on database or server side. At the end you will get a state of the art, beautifully designed, user-friendly and functional website. We ensure high quality, efficient and highly collaborative web development.</p>
-                                                    </div>
-			                                    </div>
-			                                </div>
-			                                <div class="item">
-			                                    <div class="col-xs-4">
-			                                        <a href="#"><img src="img/iconforservices/png/icon_budgets.png"></a>
-			                                        <!-- <div class="text-center">Budgets</div> -->
-			                                    </div>
-			                                </div>
-			                            </div>
-			                            <a class="left carousel-control" href="#eventCarousel" data-slide="prev"><img src="img/icon_other/arrows/icon_arrow_prew.png" alt="left"></a>
-			                            <a class="right carousel-control" href="#eventCarousel" data-slide="next"><img src="img/icon_other/arrows/icon_arrow_next.png" alt="right"></a>
-			                        </div>		
-			                        <!--/carousel-inner-->
-			                    </div><!--/myCarousel-->
-			                </div>
-				        </div>
-				        <div class="row">
-                            <div class="col-xs-12">
+                                <!-- <div class="wrapper-text"> -->
                                 <div class="wrapper-text">
-        				        	<div class="text">
-        				        		<h3>Web development</h3>
-        				        		<p>We provide a full range of web development: from front- and back-end code writing to working on database or server side. At the end you will get a state of the art, beautifully designed, user-friendly and functional website. We ensure high quality, efficient and highly collaborative web development.</p>
-        				        	</div>
-        				        	<div class="text">
-        				        		<h3>Mobile apps development</h3>
-        				        		<p>Using the best practices in iOS and Android app development, from strategy to implementation, we use mobile technologies that will make your app succeed in today’s mobile marketplace.</p>
-        				        	</div>
-        				        	<div class="text">
-        				        		<h3>Design</h3>
-        				        		<p>Our graphic designers go quickly from mock-up to interactive prototype designs and finally ensure brilliant product design. Your product will combine nice look and great functionality, so users can find the information they need quickly.</p>
-        				        	</div>
-                                </div>
-                            </div>
+                                    <div class="text">
+                                        <img src="img/iconforservices/png/icon_web_development.png" alt="">
+                                        <h3>Web development</h3>
+                                        <p>We provide a full range of web development: from front- and back-end code writing to working on database or server side. At the end you will get a state of the art, beautifully designed, user-friendly and functional website. We ensure high quality, efficient and highly collaborative web development.</p>
+                                    </div>
+                                    <div class="text">
+                                        <img src="img/iconforservices/png/icon_mobile_apps.png" alt="">
+                                        <h3>Mobile apps development</h3>
+                                        <p>Using the best practices in iOS and Android app development, from strategy to implementation, we use mobile technologies that will make your app succeed in today’s mobile marketplace.</p>
+                                    </div>
+                                    <div class="text">
+                                        <img src="img/iconforservices/png/icon_design.png" alt="">
+                                        <h3>Design</h3>
+                                        <p>Our graphic designers go quickly from mock-up to interactive prototype designs and finally ensure brilliant product design. Your product will combine nice look and great functionality, so users can find the information they need quickly.</p>
+                                    </div>
+                                    <div class="text">
+                                        <img src="img/iconforservices/png/icon_support.png" alt="">
+                                        <h3>Support</h3>
+                                        <p>We provide a full range of web development: from front- and back-end code writing to working on database or server side. At the end you will get a state of the art, beautifully designed, user-friendly and functional website. We ensure high quality, efficient and highly collaborative web development.</p>
+                                    </div>
+                                    <div class="text">
+                                        <img src="img/iconforservices/png/icon_strategy.png" alt="">
+                                        <h3>Strategy</h3>
+                                        <p>Using the best practices in iOS and Android app development, from strategy to implementation, we use mobile technologies that will make your app succeed in today’s mobile marketplace.</p>
+                                    </div>
+                                    <div class="text">
+                                        <img src="img/iconforservices/png/icon_budgets.png" alt="">
+                                        <h3>Budgets</h3>
+                                        <p>Our graphic designers go quickly from mock-up to interactive prototype designs and finally ensure brilliant product design. Your product will combine nice look and great functionality, so users can find the information they need quickly.</p>
+                                    </div>
+                                </div>			                    
+			                </div>
 				        </div>
 				    </div>
                 </section>
@@ -144,7 +102,7 @@
                                     <div class="description">
                                         <p class="description-text">
                                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo sequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
-                                            <a href="portfolio.html"><span class="after">View all</span></a>
+                                            <span class="after"><a href="portfolio.html">View all</a></span>
                                         </p>
                                     </div>
                                     <img src="img/steve.png" alt="">
@@ -154,15 +112,66 @@
                 	</div>
                 </section>
                 <div class="clearfix"></div>
-                <section class="reviews">
+                <section class="reviews" id="reviews">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xs-12">
-                                <h2 class="title">Reviews</h2>
+                                <h2 class="title line">Reviews</h2>
+                                <div class="wrapper-reviews">
+                                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">                                        
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="thumbnail adjust1">
+                                                            <div class="half">
+                                                                <div class="description">
+                                                                    <p class="href"><a href="#">www.belstroy.com</a></p>
+                                                                    <p class="description-text">
+                                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo sequat.
+                                                                        <span class="next-review"><a href="#carousel-example-generic" data-slide="next">Next review</a></span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="half">
+                                                                <img src="img/MacBookPro-Retina.png" alt="" class="big">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="thumbnail adjust1">
+                                                            <div class="half">
+                                                                <div class="description">
+                                                                    <p class="href"><a href="#">by Jonathan Hunt</a></p>
+                                                                    <p class="description-text">
+                                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo sequat.
+                                                                        <span class="next-review"><a href="#carousel-example-generic" data-slide="next">Next review</a></span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="half">
+                                                                <img src="img/prototype.png" alt="" class="big">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Controls -->
+                                    <!-- <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a> -->
+                                    <!-- <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a> -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
+                <div class="clearfix"></div>
                 <section class="we-work">
                     <div class="container-fluid">
                         <div class="row">
@@ -172,9 +181,76 @@
                         </div>
                     </div>
                 </section>
-                <services class="countact-us"></services>
+                <section class="countact-us">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h2 class="title">Contact Us</h2>
+                                <div class="clearfix"></div>
+                                <div class="wrapper-contact">                                    
+                                    <div>
+                                        <form action="">
+                                            <div class="half">                                            
+                                                <input type="text" class="edit name" placeholder="Write your full name...">    
+                                                <input type="email" class="edit mail" placeholder="Write your e-mail address...">
+                                                <button type="submit" class="send">Contact us</button>
+                                            </div>
+                                            <div class="half">    
+                                                <textarea name="" id="" cols="30" rows="10" placeholder="Type the message..." class="area"></textarea>
+                                            </div>    
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
+        <div class="row">
+            <section>
+                <footer>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="wrapper-foot">
+                                    <div class="col-xs-4 foot">
+                                        <p><a href="#">Address</a></p>
+                                        <p><a href="#" class="last">Zaporizhya, Ukraine</a></p>
+                                    </div>
+                                    <div class="col-xs-4 foot">
+                                        <p><a href="#">Drop a line</a></p>
+                                        <p><a href="#" class="last">e-mail: eurotechnolab@gmail.com</a></p>
+                                    </div>
+                                    <div class="col-xs-4 foot">
+                                        <p><a href="#">Follow us</a></p>
+                                        <p>
+                                            <a href="#" class="last"><img src="img/icon_other/socialicon/Facebook.png" alt=""></a>
+                                            <a href="#" class="last"><img src="img/icon_other/socialicon/Twitter.png" alt=""></a>
+                                            <a href="#" class="last"><img src="img/icon_other/socialicon/Google+.png" alt=""></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </section>
+        </div>
     </div>
+    <!-- Slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="dist/slick/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){          
+            $('.wrapper-text').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            });
+
+            $(".slick-next").html();
+        });
+    </script>
 </body>
 </html>

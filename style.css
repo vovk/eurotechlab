@@ -14,9 +14,21 @@
     src: local("Lato-Black"), /* проверяем наличие шрифта в ОС пользователя */
          url(font/Lato-Black.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
 }
+@font-face {
+    font-family: Lato-Italic; /* имя шрифта для CSS правил */
+    src: local("Lato-Italic"), /* проверяем наличие шрифта в ОС пользователя */
+         url(font/Lato-Italic.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
 section{
-	margin-top: 30px;
+	margin-top: 45px;
 	margin-bottom: 50px;
+}
+section.services, .portfolio, .reviews, .contact-us, .we-work{
+	margin-top: 100px;
+}
+.first{
+	margin-right: 15px;
+	margin-left: 15px;
 }
 div.main{
 	padding-left: 30px;
@@ -47,6 +59,11 @@ div.logo, div.navigation{
 }
 .logo-text{
 	color: #fff;
+	font-size: 14pt;
+	font-family: Lato-Black;
+}
+.logo-text.black{
+	color: #000;
 }
 .menu{
 	height: 49px;
@@ -61,11 +78,16 @@ div.logo, div.navigation{
 	float: left;
 }
 .menu li a{
-	color: #000;
-	display: block;
-	padding: 10px;
 	border: 1px solid transparent;
+	color: #000;
+	font-size: 14pt;
+	font-family: Lato-Black;
+	display: block;
+	padding: 15px;
 	text-transform: uppercase;
+}
+.menu li:last-child a{
+	border: 1px solid #929292;
 }
 .menu li a:hover{
 	border: 1px solid #929292;
@@ -82,7 +104,7 @@ h2{
 }
 .title{
 	position: relative;
-	padding: 50px 0px 50px 315px;
+	padding: 50px 0px 50px 230px;
 	font-size: 32px;
 	font-family: Lato-Black;
 	font-weight: bold;  
@@ -94,33 +116,72 @@ h2{
     display: table;
     border: 1px solid #e5e5e5;
     top: 130px;
-    left: 315px;
+    left: 230px;
     width: 70px;
+    z-index: 1;
 }
 /*carousel*/
-.carousel-inner.onebyone-carosel { margin: auto; }
-.onebyone-carosel .active.left { left: -33.33%; }
-.onebyone-carosel .active.right { left: 33.33%; }
-.onebyone-carosel .next { left: 33.33%; }
-.onebyone-carosel .prev { left: -33.33%; }
-.item .col-xs-4{text-align: center;}
-
-a.carousel-control.left, a.carousel-control.right{
-	background-image: none;
+#reviews .carousel-indicators .active{ background: #31708f; }
+.carousel-inner{
+    overflow: visible!important;
 }
-a.carousel-control{
-	top: 50%;
-	bottom: auto;
+.thumbnail{
+	border: none!important;
 }
+#reviews .adjust1{ float:left; width:100%; margin-bottom:0; }
+#reviews .adjust2{ margin:0; }
+#reviews .carousel-control{ color:#31708f; width:5%; }
+#reviews .carousel-control.left, .carousel-control.right { background-image: none; }
+#reviews .media-object{ margin:auto; }
+@media screen and (max-width: 768px)
+{
+    #reviews .media-object{ margin-top:0; }
+}
+button.slick-next, button.slick-prev{
+	top: 25%;
+	position: absolute;
+	background: none;
+	border: none;
+}
+button.slick-next:before, button.slick-prev:before{
+	content: '';
+}
+button.slick-prev{
+	left: -100px;
+	background: url(img/icon_other/arrows/icon_arrow_prew.png) no-repeat no-repeat left top;
+}
+button.slick-next{
+	right: 0;
+	background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat left top;
+}
+button.slick-prev:hover, button.slick-prev:focus{
+	background: url(img/icon_other/arrows/icon_arrow_prew.png) no-repeat no-repeat left top;
+}
+button.slick-next:hover, button.slick-next:focus{
+	background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat left top;
+}
+/*carousel*/
 .wrapper-text, .wrapper-portfolio{
-	width: 65%;
+	width: 75%;
 	margin: 0 auto;
 	overflow: visible;
 }
+.wrapper-contact{
+	width: 75%;
+	margin: 0 auto;
+	height: 275px;
+}
+.wrapper-foot{
+	width: 75%;
+	margin: 0 auto;
+}
+.wrapper-reviews{
+	width: 75%;
+	margin: 0 auto;
+}
 .text{
 	float: left;
-    width: 23%;
-    margin-right: 15.5%;
+    /*margin-right: 8%;*/
 }
 .text-slider p{
 	color: rgb(155, 155, 155);
@@ -134,7 +195,7 @@ a.carousel-control{
 }
 .text h3{
 	color: #000;
-	font-size: 20px;
+	font-size: 20pt;
 	font-family: Lato-Regular;
 	font-weight: bold;
   	line-height: 1.05;
@@ -153,11 +214,12 @@ a.carousel-control{
 }
 .text p{
 	color: rgb(155, 155, 155);
-	font-size: 16px;
+	font-size: 15pt;
 	font-family: Lato-Regular;
   	line-height: 1.5;
 	padding-top: 45px;
 	/*text-align: justify;*/
+	width: 390px;
 }
 .half{
 	width: 50%;
@@ -165,17 +227,17 @@ a.carousel-control{
 }
 .wrapper-portfolio{
 	position: relative;
-	height: 200px;
+	height: 255px;
 }
 .description{
 	position: relative;
 	float: left;
 	padding-top: 45px;
-	width: 31%;
+	width: 36%;
 }
 .description p.description-text{	
 	color: rgb(155, 155, 155);
-	font-size: 16px;
+	font-size: 16pt;
 	font-family: Lato-Regular;
 	margin: 0;
 }
@@ -183,21 +245,199 @@ a.carousel-control{
     position: absolute;
     cursor: pointer;
     background: url(img/icon_other/arrows/icon_arrow_next-grey.png) no-repeat no-repeat right center;
-    color: rgb(155, 155, 155);
-    font-size: 14px;
-    font-family: Lato-Black;
-    font-weight: bold;
     right: 0;
     bottom: -60px;
     width: 150px;
     text-transform: uppercase;
 }
+.wrapper-portfolio span a{
+    color: rgb(155, 155, 155);
+    font-size: 14pt;
+    font-family: Lato-Black;
+    letter-spacing: 2px;
+}
 .wrapper-portfolio span:hover{
 	background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat right center;
+}
+.wrapper-portfolio span a:hover{
 	color: #000;
+	text-decoration: none;
 }
 .wrapper-portfolio img{
 	position: absolute;
 	right: 0;
 	bottom: 0;
+}
+#reviews .view-all{
+    position: absolute;
+    cursor: pointer;
+    background: url(img/icon_other/arrows/icon_arrow_next-grey.png) no-repeat no-repeat right center;
+    right: 0;
+    bottom: -60px;
+    width: 150px;
+    text-transform: uppercase;
+}
+#reviews .view-all a{
+    color: rgb(155, 155, 155);
+    font-size: 14pt;
+    font-family: Lato-Black;
+    letter-spacing: 2px;
+}
+#reviews .next-review{
+    position: absolute;
+    cursor: pointer;
+    background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat right center;
+    right: 0;
+    bottom: -60px;
+    width: 200px;
+    text-transform: uppercase;
+}
+#reviews .next-review a{    
+    font-size: 14pt;
+    font-family: Lato-Black;
+    letter-spacing: 2px;
+    color: #000;
+	text-decoration: none;
+}
+section#portfolio-page{
+	padding-left: 140px;
+	padding-right: 140px;
+}
+#portfolio-page header{
+	background: none;
+	height: 200px;
+}
+#portfolio-page .menu{
+	justify-content: space-between;
+}
+#portfolio-page .title{
+	padding-left: 0;
+	padding-top: 0;
+}
+#portfolio-page .line:after{
+	top: 80px;
+}
+#portfolio-page .logo{
+	justify-content: flex-start;
+}
+#portfolio-page .line:after{
+	left: 0;
+}
+#portfolio-page .wrapper-text, #portfolio-page .wrapper-portfolio{
+	width: 100%;
+}
+.href{	
+	margin-top: 10px;
+	margin-bottom: 35px;
+}
+.href a{
+	color: #000;
+	font-size: 16.02pt;
+	font-family: Lato-Italic;
+}
+div.fullpage{
+	/*padding: 0;*/
+	padding-left: 0px;
+	padding-right: 15px;
+}
+.fixheight{
+	height: 50px;
+}
+.half{
+	position: relative;
+	width: 50%;
+	float: left;
+	overflow: visible;
+}
+.half .description{
+	width: 74%;
+}
+.half img{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.reverse{
+	height: 376px;
+}
+.reverse img{
+	left: 0;
+	right: auto;
+}
+.reverse-text{
+	padding-left: 50px;	
+}
+hr{
+	margin-bottom: 50px!important;
+}
+.edit{
+	border: none;
+	border-bottom: 1px solid #9b9b9b;
+	width: 90%;
+	padding: 20px 0;
+	color: #9b9b9b;
+	font-size: 16pt;
+	font-family: Lato-Regular;
+}
+.edit:focus{
+	outline: none;
+}
+.mail{
+	margin-top: 30px;
+}
+.area{
+	border: 1px solid #9b9b9b;
+	width: 100%;
+	height: 170px;
+	padding: 20px;
+	color: #9b9b9b;
+	font-size: 16pt;
+	font-family: Lato-Regular;
+}
+.area:focus{
+	outline: none;
+}
+.send{
+	background: #fff;
+	border: 1px solid #000;
+	color: #000;
+	font-size: 14.39pt;
+	font-family: Lato-Black;
+	padding: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	position: absolute;
+	right: 10%;
+	bottom: -100px;
+	transition: all .3s;
+}
+.send:hover{
+	background: #000;
+	color: #fff;
+}
+footer{
+	background: #000;
+	margin-top: 75px;
+}
+section:last-child{
+	margin-bottom: 0;
+}
+.foot{
+	padding: 25px;
+}
+.foot p{
+	margin-bottom: 15px;
+}
+.foot p a{	
+	color: #fff;
+	font-size: 16pt;
+	font-family: Lato-Black;
+	text-decoration: none;
+}
+.foot p a.last{
+	font-family: Lato-Regular;
+	margin-right: 30px;
+}
+.foot p:last-child{
+	margin-bottom: 0;
 }

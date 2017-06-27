@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('#myCarousel').carousel({
-        interval: false
+        interval: 10000
     })
     $('.fdi-Carousel .item').each(function () {
         var next = $(this).next();
@@ -17,4 +17,3 @@ $(document).ready(function () {
         }
     });
 });
-
