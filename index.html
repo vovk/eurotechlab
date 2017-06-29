@@ -13,7 +13,7 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="dist/bootstrap/js/bootstrap.js"></script>
+    <script src="dist/bootstrap/js/bootstrap.min.js"></script>
     <script src="dist/js/carousel.js"></script>    
     <!-- Map -->
     <link rel="stylesheet" href="dist/map/jquery-jvectormap-2.0.3.css">    
@@ -24,7 +24,7 @@
     <title>EuroTechLab</title>
     <link rel="shortcut icon" href="img/favicon.ico" />                
 </head>
-<body>    
+<body>
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 main">
@@ -38,19 +38,24 @@
                                 <div class="logo-text">
                                     <span>EURO TECHNO LAB</span>
                                 </div>
+                                <div class="logo-text-mobile">
+                                    <span>ETL</span>
+                                </div>
                             </div>
                             <div class="col-xs-9 navigation">
-                                <ul class="menu">
+                                <ul class="menu-desktop">
                                     <li><a href="">Services</a></li>
-                                    <li><a href="">Portfolio</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
                                     <li><a href="">Reviews</a></li>
                                     <li><a href="">Map</a></li>
                                     <li><a href="">Contact Us</a></li>
                                 </ul>
                             </div>
+                            <!-- <h2 class="title-mobile">You dream it We build it</h2> -->
                         </div> 
                     </header>
                 </section>
+                <div class="clearfix"></div>
                 <section class="services">
                     <div class="container-fluid">
 				        <div class="row">
@@ -88,6 +93,18 @@
                                         <h3>Budgets</h3>
                                         <p>Our graphic designers go quickly from mock-up to interactive prototype designs and finally ensure brilliant product design. Your product will combine nice look and great functionality, so users can find the information they need quickly.</p>
                                     </div>
+                                </div>
+                                <div class="wrapper-mobile-text">
+                                    <div class="item-mobile">
+                                        <img src="img/iconforservices/png/icon_web_development.png" alt="">
+                                        <h3>Web development</h3>
+                                        <p>We provide a full range of web development: from front- and back-end code writing to working on database or server side. At the end you will get a state of the art, beautifully designed, user-friendly and functional website. We ensure high quality, efficient and highly collaborative web development.</p>
+                                    </div>
+                                    <div class="item-mobile">
+                                        <img src="img/iconforservices/png/icon_mobile_apps.png" alt="">
+                                        <h3>Mobile apps development</h3>
+                                        <p>Using the best practices in iOS and Android app development, from strategy to implementation, we use mobile technologies that will make your app succeed in today’s mobile marketplace.</p>
+                                    </div>
                                 </div>			                    
 			                </div>
 				        </div>
@@ -118,54 +135,36 @@
                             <div class="col-xs-12">
                                 <h2 class="title line">Reviews</h2>
                                 <div class="wrapper-reviews">
-                                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">                                        
-                                        <!-- Wrapper for slides -->
-                                        <div class="carousel-inner">
-                                            <div class="item active">
-                                                <div class="row">
-                                                    <div class="col-xs-12">
-                                                        <div class="thumbnail adjust1">
-                                                            <div class="half">
-                                                                <div class="description">
-                                                                    <p class="href"><a href="#">www.belstroy.com</a></p>
-                                                                    <p class="description-text">
-                                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo sequat.
-                                                                        <span class="next-review"><a href="#carousel-example-generic" data-slide="next">Next review</a></span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="half">
-                                                                <img src="img/MacBookPro-Retina.png" alt="" class="big">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="row">
-                                                    <div class="col-xs-12">
-                                                        <div class="thumbnail adjust1">
-                                                            <div class="half">
-                                                                <div class="description">
-                                                                    <p class="href"><a href="#">by Jonathan Hunt</a></p>
-                                                                    <p class="description-text">
-                                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo sequat.
-                                                                        <span class="next-review"><a href="#carousel-example-generic" data-slide="next">Next review</a></span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="half">
-                                                                <img src="img/prototype.png" alt="" class="big">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                    <div class="full-set">
+                                        <div class="half">
+                                            <div class="description">
+                                                <p class="href"><a href="#">www.belstroy.com</a></p>
+                                                <p class="description-text">
+                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo sequat.
+                                                    <!-- <span class="next-review"><a href="#">Next review</a></span> -->
+                                                   
+                                                </p>
                                             </div>
                                         </div>
+                                        <div class="half">
+                                            <img src="img/prototype.png" alt="" class="big">
+                                        </div>
                                     </div>
-                                    <!-- Controls -->
-                                    <!-- <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a> -->
-                                    <!-- <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a> -->
+
+                                    <div class="full-set">
+                                        <div class="half">
+                                            <div class="description">
+                                                <p class="href"><a href="#">www.belstroy.com</a></p>
+                                                <p class="description-text">
+                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo sequat.
+                                                    <!-- <span class="next-review"><a href="#">Next review</a></span> -->
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="half">
+                                            <img src="img/prototype.png" alt="" class="big">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +191,7 @@
                                     <div>
                                         <form action="">
                                             <div class="half">                                            
-                                                <input type="text" class="edit name" placeholder="Write your full name...">    
+                                                <input type="text" class="edit name" placeholder="Write your full name...">
                                                 <input type="email" class="edit mail" placeholder="Write your e-mail address...">
                                                 <button type="submit" class="send">Contact us</button>
                                             </div>
@@ -251,6 +250,14 @@
             });
 
             $(".slick-next").html();
+
+            $('.wrapper-reviews').slick();
+
+            $('.wrapper-mobile-text').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
         });
     </script>
     <!-- Map -->

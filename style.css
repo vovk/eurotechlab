@@ -24,7 +24,7 @@ section{
 	margin-bottom: 50px;
 }
 section.services, .portfolio, .reviews, .contact-us, .we-work{
-	margin-top: 100px;
+	margin-top: 75px;
 }
 .first{
 	margin-right: 15px;
@@ -57,7 +57,7 @@ div.logo, div.navigation{
 .logo-img{
 	margin-right: 25px;
 }
-.logo-text{
+.logo-text, .logo-text-mobile{
 	color: #fff;
 	font-size: 14pt;
 	font-family: Lato-Black;
@@ -65,7 +65,10 @@ div.logo, div.navigation{
 .logo-text.black{
 	color: #000;
 }
-.menu{
+.logo-text-mobile{
+	display: none;
+}
+.menu-desktop{
 	height: 49px;
 	list-style: none;
 	margin-bottom: 0;
@@ -73,11 +76,11 @@ div.logo, div.navigation{
 	align-items: center;
 	justify-content: space-around;
 }
-.menu li{
+.menu-desktop li{
 	display: inline-block;
 	float: left;
 }
-.menu li a{
+.menu-desktop li a{
 	border: 1px solid transparent;
 	color: #000;
 	font-size: 14pt;
@@ -86,29 +89,35 @@ div.logo, div.navigation{
 	padding: 15px;
 	text-transform: uppercase;
 }
-.menu li:last-child a{
+.menu-desktop li:last-child a{
 	border: 1px solid #929292;
 }
-.menu li a:hover{
+.menu-desktop li a:hover{
 	border: 1px solid #929292;
 	text-decoration: none;
 }
-.menu li a:focus{
+.menu-desktop li a:focus{
 	outline: none;
 	text-decoration: none;
+}
+a.change{
+	border: 1px solid #000!important;
 }
 h2{
 	color: #000!important;
 	margin: 0!important;
 	text-transform: uppercase;
 }
-.title{
+.title, .title-mobile{
 	position: relative;
 	padding: 50px 0px 50px 230px;
 	font-size: 32px;
 	font-family: Lato-Black;
 	font-weight: bold;  
 	line-height: 0.656;
+}
+.title-mobile{
+	display: none;
 }
 .line:after {
     position: absolute;
@@ -120,23 +129,7 @@ h2{
     width: 70px;
     z-index: 1;
 }
-/*carousel*/
-#reviews .carousel-indicators .active{ background: #31708f; }
-.carousel-inner{
-    overflow: visible!important;
-}
-.thumbnail{
-	border: none!important;
-}
-#reviews .adjust1{ float:left; width:100%; margin-bottom:0; }
-#reviews .adjust2{ margin:0; }
-#reviews .carousel-control{ color:#31708f; width:5%; }
-#reviews .carousel-control.left, .carousel-control.right { background-image: none; }
-#reviews .media-object{ margin:auto; }
-@media screen and (max-width: 768px)
-{
-    #reviews .media-object{ margin-top:0; }
-}
+/*slider*/
 button.slick-next, button.slick-prev{
 	top: 25%;
 	position: absolute;
@@ -160,7 +153,36 @@ button.slick-prev:hover, button.slick-prev:focus{
 button.slick-next:hover, button.slick-next:focus{
 	background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat left top;
 }
-/*carousel*/
+#reviews .slick-list{
+	min-height: 450px; 
+}
+#reviews button.slick-next{
+	background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat right top;	
+    top: auto;
+    bottom: 95px;
+    color: #000;
+    right: 58.7%;
+    width: 200px;  
+    text-align: left;
+    height: 17px;
+}
+#reviews button.slick-next:before{
+	content: 'Next review'!important;
+    font-size: 14pt;
+    font-family: Lato-Black;
+    letter-spacing: 2px;
+	text-decoration: none;
+    color: #000;
+    opacity: 1;
+	text-transform: uppercase;
+}
+#reviews button.slick-next:hover, button.slick-next:focus{
+	/*background: auto;*/
+}
+#reviews button.slick-prev{
+	display: none!important;
+}
+/*slider*/
 .wrapper-text, .wrapper-portfolio{
 	width: 75%;
 	margin: 0 auto;
@@ -178,6 +200,37 @@ button.slick-next:hover, button.slick-next:focus{
 .wrapper-reviews{
 	width: 75%;
 	margin: 0 auto;
+}
+.wrapper-mobile-text.slick-slider{
+	display: none;
+}
+.item-mobile h3{
+	color: #000;
+	font-size: 20pt;
+	font-family: Lato-Regular;
+	font-weight: bold;
+  	line-height: 1.05;
+	margin-bottom: 45px;
+	position: relative;
+}
+/*.item-mobile h3:after{
+	position: absolute;
+	content: "";
+	display: table;
+	border: 1px solid #e5e5e5;
+	top: 70px;
+	left: 0;
+	width: 70px;
+}*/
+.item-mobile p{
+	color: rgb(155, 155, 155);
+	font-size: 15pt;
+	font-family: Lato-Regular;
+  	line-height: 1.5;
+	padding-top: 45px;
+	text-align: -webkit-auto;
+	padding-left: 12.5%;
+    padding-right: 12.5%;
 }
 .text{
 	float: left;
@@ -233,7 +286,7 @@ button.slick-next:hover, button.slick-next:focus{
 	position: relative;
 	float: left;
 	padding-top: 45px;
-	width: 36%;
+	width: 40%;
 }
 .description p.description-text{	
 	color: rgb(155, 155, 155);
@@ -242,24 +295,30 @@ button.slick-next:hover, button.slick-next:focus{
 	margin: 0;
 }
 .wrapper-portfolio span{
-    position: absolute;
+        /* position: absolute; */
     cursor: pointer;
     background: url(img/icon_other/arrows/icon_arrow_next-grey.png) no-repeat no-repeat right center;
-    right: 0;
-    bottom: -60px;
-    width: 150px;
+    /* right: 0; */
+    /* bottom: -60px; */
+    /* width: 200px; */
     text-transform: uppercase;
+    /* text-align: right; */
+    display: block;
+    margin-top: 50px;
+    text-align: right;
+    padding-right: 70px;
 }
 .wrapper-portfolio span a{
     color: rgb(155, 155, 155);
     font-size: 14pt;
     font-family: Lato-Black;
     letter-spacing: 2px;
+    display: block;
 }
 .wrapper-portfolio span:hover{
 	background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat right center;
 }
-.wrapper-portfolio span a:hover{
+.wrapper-portfolio span:hover a{
 	color: #000;
 	text-decoration: none;
 }
@@ -284,15 +343,21 @@ button.slick-next:hover, button.slick-next:focus{
     letter-spacing: 2px;
 }
 #reviews .next-review{
-    position: absolute;
+    /* position: absolute; */
     cursor: pointer;
     background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat right center;
-    right: 0;
-    bottom: -60px;
-    width: 200px;
+    /* right: 0; */
+    /* bottom: -60px; */
+    /* width: 200px; */
     text-transform: uppercase;
+    /* text-align: right; */
+    display: block;
+    margin-top: 50px;
+    text-align: right;
+    padding-right: 70px;
 }
-#reviews .next-review a{    
+#reviews .next-review a{  
+	display: block;  
     font-size: 14pt;
     font-family: Lato-Black;
     letter-spacing: 2px;
@@ -307,7 +372,7 @@ section#portfolio-page{
 	background: none;
 	height: 200px;
 }
-#portfolio-page .menu{
+#portfolio-page .menu-desktop{
 	justify-content: space-between;
 }
 #portfolio-page .title{
@@ -350,7 +415,7 @@ div.fullpage{
 	overflow: visible;
 }
 .half .description{
-	width: 74%;
+	width: 82%;
 }
 .half img{
 	position: absolute;
