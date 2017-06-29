@@ -45,6 +45,9 @@ header{
 div.logo, div.navigation{
 	padding: 0;
 }
+.navigation{
+	min-height: 0!important;
+}
 .logo{
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -57,6 +60,9 @@ div.logo, div.navigation{
 .logo-img{
 	margin-right: 25px;
 }
+.hamburger{
+	display: none!important;
+}
 .logo-text, .logo-text-mobile{
 	color: #fff;
 	font-size: 14pt;
@@ -66,6 +72,9 @@ div.logo, div.navigation{
 	color: #000;
 }
 .logo-text-mobile{
+	display: none;
+}
+.menu-mobile{
 	display: none;
 }
 .menu-desktop{
@@ -157,14 +166,30 @@ button.slick-next:hover, button.slick-next:focus{
 	min-height: 450px; 
 }
 #reviews button.slick-next{
-	background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat right top;	
+	/*background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat right top;	
     top: auto;
     bottom: 95px;
     color: #000;
     right: 58.7%;
     width: 200px;  
     text-align: left;
-    height: 17px;
+    height: 17px;*/
+    position: absolute; 
+	top: auto;
+    left: 24.5%;
+    bottom: 0;
+    cursor: pointer;
+    background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat right center;
+    /* right: 0; */
+    /* bottom: -60px; */
+    /* width: 200px; */
+    text-transform: uppercase;
+    /* text-align: right; */
+    display: block;
+    margin: 0;
+    text-align: right;
+    padding-right: 70px;
+    width: 220px;
 }
 #reviews button.slick-next:before{
 	content: 'Next review'!important;
@@ -303,6 +328,16 @@ button.slick-next:hover, button.slick-next:focus{
     /* width: 200px; */
     text-transform: uppercase;
     /* text-align: right; */
+    display: block;
+    margin-top: 50px;
+    text-align: right;
+    padding-right: 70px;
+}
+.wrapper-portfolio span.after-mobile{
+	display: none!important;
+	cursor: pointer;
+    background: url(img/icon_other/arrows/icon_arrow_next-grey.png) no-repeat no-repeat right center;
+    text-transform: uppercase;
     display: block;
     margin-top: 50px;
     text-align: right;
@@ -462,7 +497,7 @@ hr{
 .area:focus{
 	outline: none;
 }
-.send{
+.send, .send-mobile{
 	background: #fff;
 	border: 1px solid #000;
 	color: #000;
@@ -476,9 +511,12 @@ hr{
 	bottom: -100px;
 	transition: all .3s;
 }
-.send:hover{
+.send:hover, .send-mobile:hover{
 	background: #000;
 	color: #fff;
+}
+.send-mobile{
+	display: none;
 }
 footer{
 	background: #000;

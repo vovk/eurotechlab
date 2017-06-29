@@ -21,10 +21,12 @@
     <link rel="stylesheet" type="text/css" href="dist/slick/slick/slick.css"/>
     <!-- Add the new slick-theme.css if you want the default styling -->
     <link rel="stylesheet" type="text/css" href="dist/slick/slick/slick-theme.css"/>
+    <!-- Mobile -->
+    <link rel="stylesheet" type="text/css" href="dist/mobile/jvmobilemenu/jv-jquery-mobile-menu.css">
     <title>EuroTechLab</title>
     <link rel="shortcut icon" href="img/favicon.ico" />                
 </head>
-<body>
+<body>    
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 main">
@@ -50,12 +52,30 @@
                                     <li><a href="">Map</a></li>
                                     <li><a href="">Contact Us</a></li>
                                 </ul>
+                                <ul class="menu-mobile">
+                                    <div class="col-xs-3 logo">
+                                        <div class="logo-img">
+                                            <a href="index.html"><img src="img/logo.png" alt=""></a>
+                                        </div>
+                                        <div class="logo-text">
+                                            <span>EURO TECHNO LAB</span>
+                                        </div>
+                                        <div class="logo-text-mobile">
+                                            <span>ETL</span>
+                                        </div>
+                                    </div>
+                                    <li><a href="">Services</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="">Reviews</a></li>
+                                    <li><a href="">Map</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                </ul>
                             </div>
-                            <!-- <h2 class="title-mobile">You dream it We build it</h2> -->
+                            <!-- <div class="clearfix"></div> -->
+                            <h2 class="title-mobile">You dream it We build it</h2>
                         </div> 
                     </header>
                 </section>
-                <div class="clearfix"></div>
                 <section class="services">
                     <div class="container-fluid">
 				        <div class="row">
@@ -117,12 +137,13 @@
                 				<h2 class="title line">Portfolio</h2>
                                 <div class="wrapper-portfolio">
                                     <div class="description">
-                                        <p class="description-text">
+                                        <p class="description-text swap-text">
                                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo sequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
                                             <span class="after"><a href="portfolio.html">View all</a></span>
                                         </p>
                                     </div>
-                                    <img src="img/steve.png" alt="">
+                                    <img src="img/steve.png" alt="" class="swap-img">
+                                    <span class="after-mobile"><a href="portfolio.html">View all</a></span>
                                 </div> 
                 			</div>
                 		</div>
@@ -197,6 +218,7 @@
                                             </div>
                                             <div class="half">    
                                                 <textarea name="" id="" cols="30" rows="10" placeholder="Type the message..." class="area"></textarea>
+                                                <button type="submit" class="send-mobile">Contact us</button>
                                             </div>    
                                         </form>
                                     </div>
@@ -239,7 +261,7 @@
         </div>
     </div>
     <!-- Slick -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
     <script type="text/javascript" src="dist/slick/slick/slick.min.js"></script>
     <script>
         $(document).ready(function(){          
@@ -264,5 +286,19 @@
     <script src="dist/map/jquery-jvectormap-2.0.3.min.js"></script>
     <script src="dist/map/jquery-jvectormap-world-mill.js"></script>
     <script src="dist/js/map.js"></script>
+    <!-- Mobile -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="dist/mobile/jvmobilemenu/jv-jquery-mobile-menu.js"></script>
+    <script>
+        $.jvmobilemenu({
+            mainContent: $('.navigation'),
+            theMenu: $('.menu-mobile'),
+            slideSpeed: 0.3,
+            menuWidth: 240,
+            position: 'right',
+            menuPadding: '20px 20px 60px'
+        });
+    </script>
+    <script src="dist/js/swap.js"></script>
 </body>
 </html>

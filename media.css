@@ -5,6 +5,14 @@
 	.line:after{
 		left: 12.5%;
 	}
+	.menu-mobile.mobile-menu{
+		background: url(img/bg.png) no-repeat 0;
+		background-size: cover;
+		list-style: none;
+		padding-left: 0;
+		width: 100%!important;
+		z-index: 10;
+	}
 }
 @media screen and (max-width: 1650px){
 	.text p{
@@ -18,7 +26,7 @@
 		font-size: 12pt;
 	}
 	#reviews .slick-slide img{
-		width: 90%;
+		width: 100%;
 	}
 }
 @media screen and (max-width: 1350px){
@@ -32,9 +40,9 @@
 /*	.description p.description-text{
 		font-size: 11pt;
 	}*/
-	#reviews button.slick-next{
-		bottom: 15px;
-	}
+	/*#reviews button.slick-next{
+		bottom: -30px;
+	}*/
 	#reviews .slick-list{
 		min-height: 320px;
 	}
@@ -64,15 +72,16 @@
 	.item-mobile p{
 		font-size: 13pt;
 	}
-}
-@media screen and (max-width: 1050px){
-	#reviews button.slick-next{
-		bottom: 0;
-	}
+	/*#reviews button.slick-next{
+		bottom: -30px;
+	}*/
 }
 @media screen and (max-width: 1000px){
 	header{
-		height: 400px;
+		background: url(img/bg-mobile.png) no-repeat no-repeat;
+		background-position: 0;
+		-webkit-background-size: cover;
+		background-size: cover;
 	}
 	.logo-img{
 		margin-right: 10px;
@@ -89,16 +98,23 @@
 	.text p{
     	width: 155px;
 	}
-	.wrapper-portfolio img{
-		width: 55%;
-		height: 100%;
-		display: block;
+	.item-mobile p{
+		padding-top: 0;
 	}
 	#reviews button.slick-next{
-		width: 170px;
+		/*width: 170px;*/
 	}
-	#reviews button.slick-next:before, .wrapper-portfolio span a{
+	.wrapper-portfolio span{
+		display: none;
+	}
+	.wrapper-portfolio span.after-mobile{
+		display: block!important;
+	}
+	#reviews button.slick-next:before, .wrapper-portfolio span.after-mobile a{
 		font-size: 11pt;
+	}
+	#reviews .slick-slide img{
+		width: 100%;
 	}
 	.send{
 		font-size: 11pt;
@@ -107,7 +123,7 @@
 		left: -10%;
 	}
 	#reviews button.slick-next{
-		bottom: -10%;
+		/*bottom: -10%;*/
 	}
 	/*portfolio*/
 	.wrapper-portfolio{
@@ -119,8 +135,9 @@
 		padding: 0;
 	}
 	.wrapper-portfolio img{
-		position: static;
 		width: auto;
+		display: block;
+		position: static;
 		height: auto;
 		margin: 0 auto;
 	}
@@ -131,22 +148,22 @@
 	.logo-text-mobile{
 		display: block;
 	}
-/*	header{
-		background: url(img/bg-mobile.png) no-repeat no-repeat left top;
-		-webkit-background-size: cover;
-		background-size: cover;
-		height: auto;
-		min-height: 1194px;
-		padding-top: 25px;
-	}*/
+	.navigation{
+		position: absolute!important;
+	}
 	.menu-desktop{
 		display: none;
+	}
+	div.hamburger{
+		display: block!important;
+		border: 2px solid #929292;
+		padding: 20px 20px 18px 20px;
 	}
 	.title-mobile{
 		color: #fff!important;
 	    display: block;
 	    padding: 40px 50px;
-	    font-size: 67pt;
+	    font-size: 45pt;
 	    line-height: 2;
 	}
 	.first{
@@ -173,6 +190,11 @@
 	button.slick-next{
 		right: 0;
 	}
+	#reviews button.slick-next{
+		left: auto;
+		right: 0;
+		bottom: -10%;
+	}
 	.wrapper-mobile-text .slick-slide img{
 		margin: 0 auto;
 	}
@@ -189,5 +211,210 @@
 	#reviews .half img{
 		position: static;
 		margin: 0 auto;
+	}
+	div.logo{
+		display: block;
+		padding-left: 50px;
+	}
+	.logo-img{
+		float: left;
+	}
+	.logo-text-mobile{
+		min-width: 49px;
+		line-height: 49px;
+	}
+	.wrapper-portfolio span.after-mobile{
+		background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat right center;
+	}
+	.wrapper-portfolio span a{
+		color: #000;
+	}
+	/*menu*/
+	.mobile-menu{
+		/*padding: 50px!important;*/
+	}
+	.mobile-menu .logo{
+		float: none;
+	}
+	.mobile-menu li{
+		margin: 50px 50px 0 100px;
+		border: 1px solid transparent;
+	}
+	.mobile-menu .logo{
+		padding-left: 25px;
+	}
+	.mobile-menu li a{
+		color: #0f1010;
+		padding: 10px;
+		font-family: Lato-Black;
+		font-size: 16pt;
+	}
+	.mobile-menu li a:hover{
+		border: 1px solid #929292;
+		text-decoration: none;
+	}
+	/*menu*/
+}
+@media screen and (max-width: 767px){
+	.foot p a{
+		font-size: 10pt;
+	}
+}
+@media screen and (max-width: 700px){
+	header div.logo{
+		width: 100%;
+		height: 49px;
+	}
+	.title-mobile{
+		font-size: 42pt;
+		line-height: 1.5;
+	}
+	.logo-text-mobile{
+		float: left;
+	}
+	.wrapper-text, .wrapper-portfolio{
+		width: 100%;
+	}
+	.wrapper-portfolio .description p.description-text{
+		padding-left: 12.5%;
+		padding-right: 12.5%;
+	}
+}
+@media screen and (max-width: 650px){
+	.foot p a{
+		font-size: 12pt;
+	}
+	.title-mobile{
+		font-size: 37pt;
+		padding: 80px 50px
+	}
+	.wrapper-contact .half{
+		width: 100%;
+		float: none;
+	}
+	.wrapper-contact .half:nth-of-type(2){
+		text-align: right;
+	}
+	.edit{
+		width: 100%;
+	}
+	.send{
+		position: static;
+		display: none;
+	}
+	.wrapper-contact{
+		height: auto;
+	}
+	.send-mobile{
+		display: inline-block;
+		position: static;
+		font-size: 11pt;
+	}
+	.area{
+		margin: 50px 0;
+	}
+	div.foot{
+		width: 100%;
+		float: none;
+	}
+}
+@media screen and (max-width: 650px){
+	.title-mobile{
+		font-size: 30pt;
+	}
+	.wrapper-portfolio img{
+		width: 100%;
+	}
+	.services{
+		margin-bottom: 90px;
+	}
+	.item-mobile h3{
+		text-align: left;
+		padding-left: 12.5%;
+	}
+	.item-mobile p, 
+	.wrapper-portfolio .description p.description-text,
+	.description p.description-text{
+		font-size: 15pt;
+	}
+	.item-mobile p{
+		padding-top: 45px;
+	}
+	.item-mobile h3:after{
+		position: absolute;
+		content: "";
+		display: table;
+		border: 1px solid #e5e5e5;
+		top: 70px;
+		left: 12.5%;
+		width: 70px;
+	}
+}
+@media screen and (max-width: 425px){
+	.item-mobile h3{
+		padding-left: 50px;
+		text-align: left;
+	}
+	#reviews div.col-xs-12{
+		padding: 0;
+	}
+	#reviews .wrapper-reviews{
+		width: 100%;
+	}
+	#reviews .description{
+		padding: 0 15px;
+	}
+	.mobile-menu li{
+	    margin: 50px 50px 0 25px;
+	}
+
+}
+@media screen and (max-width: 375px){
+	div.logo, .title-mobile{
+		padding-left: 0px;
+		padding-right: 0;
+	}
+	.wrapper-reviews{
+		/*width: 90%;*/
+	}
+	.full-set.slick-active{
+		/*width: 340px;*/
+	}
+	#reviews {
+		/*display: none;*/
+	}
+	.wrapper-foot{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 350px){
+	header{
+		background-position: -90px;
+	}
+	.title{
+		padding-left: 0;
+	}
+	.title-mobile{
+		font-size: 28pt;
+	}
+	.item-mobile p, 
+	.wrapper-portfolio .description p.description-text, 
+	.description p.description-text{
+		font-size: 13pt;
+		line-height: 1.2;
+	}
+	.item-mobile h3{
+		padding-left: 0;
+	}
+	.item-mobile h3:after{
+		left: 0;
+	}
+	.item-mobile p,
+	.wrapper-portfolio .description p.description-text{
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.wrapper-contact{
+		width: 100%;
 	}
 }
