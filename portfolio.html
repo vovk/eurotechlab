@@ -14,9 +14,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="dist/bootstrap/js/bootstrap.min.js"></script>
-    <script src="dist/js/carousel.js"></script>    
-    <!-- Map -->
-    <script src="dist/js/map.js"></script>
+    <!-- Mobile -->
+    <link rel="stylesheet" type="text/css" href="dist/mobile/jvmobilemenu/jv-jquery-mobile-menu.css">
     <title>EuroTechLab</title>
     <link rel="shortcut icon" href="img/favicon.ico" />                
 </head>
@@ -26,19 +25,38 @@
             <section id="portfolio-page">
                 <header>
                     <div class="header">
-                        <div class="col-xs-2 logo">
-                            <div class="logo-img">
+                        <div class="col-xs-3 logo">
+                            <!-- <div class="logo-img">
                                 <a href="index.html"><img src="img/logo2.png" alt=""></a>
                             </div>
                             <div class="logo-text black">
                                 <span>EURO TECHNO LAB</span>
                             </div>
-                        </div>
-                        <div class="col-xs-1"></div>   
+                            <div class="logo-text-mobile">
+                                <span>ETL</span>
+                            </div> -->
+                            <a href="index.html" class="">
+                                <img src="img/logo2.png" class="img-logo" alt="">
+                                <span class="l-text black">EURO TECHNO LAB</span>
+                                <span class="l-text-mobile black">ETL</span>
+                            </a>
+                        </div>   
                         <div class="col-xs-9 navigation">
-                            <ul class="menu">
+                            <ul class="menu-desktop">
                                 <li><a href="">Services</a></li>
-                                <li><a href="portfolio.html" class="change">Portfolio</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="">Reviews</a></li>
+                                <li><a href="">Map</a></li>
+                                <li><a href="">Contact Us</a></li>
+                            </ul>
+                            <ul class="menu-mobile">
+                                <a href="index.html" class="">
+                                    <img src="img/logo.png" class="img-logo" alt="">
+                                    <span class="l-text">EURO TECHNO LAB</span>
+                                    <span class="l-text-mobile">ETL</span>
+                                </a>
+                                <li><a href="">Services</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
                                 <li><a href="">Reviews</a></li>
                                 <li><a href="">Map</a></li>
                                 <li><a href="">Contact Us</a></li>
@@ -50,15 +68,15 @@
                     <div class="wrapper">
                         <div class="half">
                             <h2 class="title line">Belstroy</h2>
-                            <div class="description">
+                            <div class="description swap-port1">
                                 <p class="href"><a href="#">www.belstroy.com</a></p>
                                 <p class="description-text">
                                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo sequat. 
                                 </p>
                             </div>
                         </div>
-                        <div class="half">
-                            <img src="img/MacBookPro-Retina.png" alt="" class="big">
+                        <div class="half second">
+                            <img src="img/MacBookPro-Retina.png" alt="" class="big img-swap-port1">
                         </div>
                     </div>
                 </div>
@@ -96,16 +114,16 @@
                     <div class="wrapper">
                         <div class="half">
                             <h2 class="title line">Age of slots</h2>
-                            <div class="description">
+                            <div class="description swap-port2">
                                 <p class="href"><a href="#">www.ageofslots.com</a></p>
                                 <p class="description-text">
                                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo sequat. 
                                 </p>
                             </div>
                         </div>
-                        <div class="half">
-                            <img src="img/iphone1.png" alt="" class="big">
-                        </div>
+                        <div class="half second">
+                            <img src="img/iphone1.png" alt="" class="big img-swap-port2">
+                        </div>                        
                     </div>
                 </div>
             </section>
@@ -141,5 +159,19 @@
             </section>
         </div>
     </div>
+    <!-- Mobile -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="dist/mobile/jvmobilemenu/jv-jquery-mobile-menu.js"></script>
+    <script>
+        $.jvmobilemenu({
+            mainContent: $('.navigation'),
+            theMenu: $('.menu-mobile'),
+            slideSpeed: 0.3,
+            menuWidth: 240,
+            position: 'right',
+            menuPadding: '20px 20px 60px'
+        });
+    </script>
+    <script src="dist/js/swap.js"></script>
 </body>
 </html>

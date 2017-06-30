@@ -57,13 +57,13 @@ div.logo, div.navigation{
 	align-items: center;
 	justify-content: center;
 }
-.logo-img{
+/*.logo-img{
 	margin-right: 25px;
-}
+}*/
 .hamburger{
 	display: none!important;
 }
-.logo-text, .logo-text-mobile{
+/*.logo-text, .logo-text-mobile{
 	color: #fff;
 	font-size: 14pt;
 	font-family: Lato-Black;
@@ -72,6 +72,35 @@ div.logo, div.navigation{
 	color: #000;
 }
 .logo-text-mobile{
+	display: none;
+}*/
+.logo a{
+	color: #fff;
+	font-size: 14pt;
+	font-family: Lato-Black;
+	display: block;
+}
+.logo a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+.img-logo{
+	margin-right: 25px;
+	float: left;
+}
+.img-logo2{
+	display: none;
+}
+.l-text{
+	display: block;
+	float: left;
+	padding-top: 10px;
+}
+.l-text.black{
+	color: #000;
+	padding-top: 10px;
+}
+.l-text-mobile{
 	display: none;
 }
 .menu-mobile{
@@ -331,7 +360,7 @@ button.slick-next:hover, button.slick-next:focus{
     display: block;
     margin-top: 50px;
     text-align: right;
-    padding-right: 70px;
+    /*padding-right: 70px;*/
 }
 .wrapper-portfolio span.after-mobile{
 	display: none!important;
@@ -341,7 +370,7 @@ button.slick-next:hover, button.slick-next:focus{
     display: block;
     margin-top: 50px;
     text-align: right;
-    padding-right: 70px;
+    /*padding-right: 70px;*/
 }
 .wrapper-portfolio span a{
     color: rgb(155, 155, 155);
@@ -349,6 +378,10 @@ button.slick-next:hover, button.slick-next:focus{
     font-family: Lato-Black;
     letter-spacing: 2px;
     display: block;
+    /*padding-right: 70px;*/
+}
+.wrapper-portfolio span.after-mobile a, .wrapper-portfolio span a{
+	padding-right: 70px;
 }
 .wrapper-portfolio span:hover{
 	background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat right center;
@@ -437,7 +470,7 @@ section#portfolio-page{
 }
 div.fullpage{
 	/*padding: 0;*/
-	padding-left: 0px;
+	padding-left: 15px;
 	padding-right: 15px;
 }
 .fixheight{
@@ -452,10 +485,13 @@ div.fullpage{
 .half .description{
 	width: 82%;
 }
-.half img{
+/*.half img{
 	position: absolute;
 	right: 0;
 	top: 0;
+}*/
+.wrapper .second{
+	text-align: left;
 }
 .reverse{
 	height: 376px;
@@ -465,7 +501,7 @@ div.fullpage{
 	right: auto;
 }
 .reverse-text{
-	padding-left: 50px;	
+	/*padding-left: 50px;	*/
 }
 hr{
 	margin-bottom: 50px!important;
@@ -543,4 +579,8 @@ section:last-child{
 }
 .foot p:last-child{
 	margin-bottom: 0;
+}
+.jvectormap-container{
+	background-color: transparent;
+	background: linear-gradient(to bottom, #CCE0EE, #F4F5F7)!important;
 }

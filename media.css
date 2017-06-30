@@ -13,6 +13,14 @@
 		width: 100%!important;
 		z-index: 10;
 	}
+
+	/*portfolio*/
+	#portfolio-page .logo-text.black,
+	#portfolio-page .menu-desktop li a{
+		font-size: 10pt!important;
+	}
+
+	/*portfolio*/
 }
 @media screen and (max-width: 1650px){
 	.text p{
@@ -29,6 +37,27 @@
 		width: 100%;
 	}
 }
+@media screen and (max-width: 1500px){
+	.wrapper .second{
+		text-align: right;
+	}
+	.reverse-text{
+		padding-left: 50px;
+	}
+	.reverse{
+		height: auto;
+	}
+}
+@media screen and (max-width: 1450px){
+	.wrapper .reverse img,
+	.second img{
+		width: 100%;
+	}
+	section#portfolio-page{
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+}
 @media screen and (max-width: 1350px){
 	.text h3{
 		font-size: 16pt;
@@ -40,9 +69,9 @@
 /*	.description p.description-text{
 		font-size: 11pt;
 	}*/
-	/*#reviews button.slick-next{
+	#reviews button.slick-next{
 		bottom: -30px;
-	}*/
+	}
 	#reviews .slick-list{
 		min-height: 320px;
 	}
@@ -51,8 +80,14 @@
 	.wrapper-portfolio img{
 		width: 60%;
 	}
-	.logo-text, .menu-desktop li a{
+	/*.logo-text, */.menu-desktop li a{
 		font-size: 10pt;
+	}
+	.logo a{
+		font-size: 10pt;
+	}
+	.l-text{
+		padding-top: 15px;
 	}
 	button.slick-next{
 		right: -15%;
@@ -86,8 +121,19 @@
 	.logo-img{
 		margin-right: 10px;
 	}
-	.logo-text, .menu-desktop li a{
+	/*.logo-text,*/ .menu-desktop li a{
 		font-size: 9pt;
+	}
+	.logo a{
+		font-size: 9pt;
+	}
+	.l-text{
+		display: none;
+	}
+	.l-text-mobile{
+		display: block;
+		font-size: 14pt;
+		line-height: 49px;
 	}
 	.line:after{
 		border: transparent;
@@ -100,6 +146,7 @@
 	}
 	.item-mobile p{
 		padding-top: 0;
+		text-align: left;
 	}
 	#reviews button.slick-next{
 		/*width: 170px;*/
@@ -141,13 +188,45 @@
 		height: auto;
 		margin: 0 auto;
 	}
+	.wrapper .second{
+		overflow: auto;
+		text-align: center;
+	}
+	.wrapper .reverse img,
+	.second img{
+		width: auto;
+	}
+	.wrapper .half .description{
+		width: 100%;
+		text-align: center;
+	}
+	.wrapper .href{
+		margin-top: 35px;
+		text-align: left;
+	}
+	.wrapper .description p.description-text{
+		text-align: left;
+	}
+	.reverse{
+		text-align: center;
+	}
+	.reverse-text{
+		overflow: auto;
+		padding-left: 0;
+	}
+	.reverse-position{
+		text-align: center;
+	}
+	.reverse-text h2{
+		text-align: left;
+	}
 	/*portfolio*/	
-	.logo-text{
+/*	.logo-text{
 		display: none;
 	}
 	.logo-text-mobile{
 		display: block;
-	}
+	}*/
 	.navigation{
 		position: absolute!important;
 	}
@@ -215,14 +294,15 @@
 	div.logo{
 		display: block;
 		padding-left: 50px;
+		float: none;
 	}
 	.logo-img{
 		float: left;
 	}
-	.logo-text-mobile{
+/*	.logo-text-mobile{
 		min-width: 49px;
 		line-height: 49px;
-	}
+	}*/
 	.wrapper-portfolio span.after-mobile{
 		background: url(img/icon_other/arrows/icon_arrow_next.png) no-repeat no-repeat right center;
 	}
@@ -254,11 +334,61 @@
 		text-decoration: none;
 	}
 	/*menu*/
+	.mobile-menu .l-text-mobile{
+		color: #fff;
+		font-family: Lato-Black;
+	}
+	.mobile-menu .img-logo{
+		margin-left: 50px;
+	}
+	/*portfolio*/
+	#portfolio-page header{
+		padding: 0;
+	}
+	#portfolio-page div.logo{
+		padding-left: 0;
+	}
+	#portfolio-page header{
+		height: 100px;
+	}
+/*	#portfolio-page .logo-text-mobile{
+		color: #000;
+	}*/
+	.wrapper .half{
+		float: none;
+		width: 100%;
+		overflow: auto;
+	}
+	#portfolio-page .reverse .title{
+		text-align: left;
+	}
+	.reverse{
+		height: auto;
+	}
+	.l-text-mobile.black{
+		color: #cce0ee;
+	}
+	/*portfolio*/
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
 	.foot p a{
 		font-size: 10pt;
 	}
+	div.logo{
+		width: 100%;
+	}
+	/*portfolio*/
+	section#portfolio-page{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	#portfolio-page .title{
+		padding-left: 30px;
+	}
+	.img-logo{
+		margin-right: 10px;
+	}
+	/*portfolio*/
 }
 @media screen and (max-width: 700px){
 	header div.logo{
@@ -269,9 +399,9 @@
 		font-size: 42pt;
 		line-height: 1.5;
 	}
-	.logo-text-mobile{
+/*	.logo-text-mobile{
 		float: left;
-	}
+	}*/
 	.wrapper-text, .wrapper-portfolio{
 		width: 100%;
 	}
@@ -279,6 +409,14 @@
 		padding-left: 12.5%;
 		padding-right: 12.5%;
 	}
+	/*portfolio*/
+	.wrapper .reverse img, .second img, .big{
+		width: 100%;
+	}
+	.reverse{
+		height: auto;
+	}
+	/*portfolio*/
 }
 @media screen and (max-width: 650px){
 	.foot p a{
@@ -366,6 +504,26 @@
 	}
 	.mobile-menu li{
 	    margin: 50px 50px 0 25px;
+	}
+	.mobile-menu .img-logo{
+		margin-left: 0;
+	}
+	.wrapper-portfolio .description p.description-text, 
+	.item-mobile p{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.item-mobile h3{
+		padding-left: 0;
+	}
+	.item-mobile h3:after{
+		left: 0;
+	}
+	.title{
+		padding-left: 0;
+	}
+	#reviews .title{
+		padding-left: 15px;
 	}
 
 }
